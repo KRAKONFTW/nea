@@ -3,7 +3,7 @@ import unittest
 import sys
 sys.path.append('../')
 
-from model.Wall import *
+from classes.sprites.Wall import *
 
 class WallTest(unittest.TestCase):
 
@@ -12,14 +12,7 @@ class WallTest(unittest.TestCase):
         dx = 0
         dy = 0
         wall = Wall(dx, dy, walls)
-        wall.text_objects()
-
-        text = "aaa"
-        font =
-        wall = font.render(text, font)
-        font.render()
-        wall.text_objects()
-
+        self.assertEqual(wall.rect.x, 0)
 
 
 if __name__ == '__main__':
